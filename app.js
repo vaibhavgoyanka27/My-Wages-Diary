@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin_vaibhav:Vaibhav123@cluster0.8fxi6b7.mongodb.net/ToDo", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin_vaibhav:Vaibhav123@cluster0.8fxi6b7.mongodb.net/ToDo");
 
 function getDate() {
 
