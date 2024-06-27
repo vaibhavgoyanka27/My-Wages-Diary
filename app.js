@@ -1,8 +1,10 @@
 //jshint esversion:6
-
+import 'dotenv/config';
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+
+
 import { name } from "ejs";
 import _ from "lodash";
 const app = express();
@@ -12,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin_vaibhav:Vaibhav123@cluster0.8fxi6b7.mongodb.net/ToDo");
+mongoose.connect(process.env.mongoURL);
 
 function getDate() {
 
